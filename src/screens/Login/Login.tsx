@@ -1,5 +1,5 @@
 import React, { FC, useContext, useState } from 'react';
-import { View } from 'react-native';
+import { Image, View } from 'react-native';
 import { GoogleSigninButton } from '@react-native-google-signin/google-signin';
 import { signIn } from '@services/google';
 import { store } from '@store/index';
@@ -9,7 +9,8 @@ import { Input } from '@components/Input';
 import { Divider } from '@components/Divider';
 import { Button } from '@components/Button';
 import styles from './styles';
-import { TextCA } from '@components/TextCA';
+
+const APP_ICON_ROUTE = '../../../assets/icons/AppIcon.png';
 
 export const Login: FC = (): JSX.Element => {
   const globalState = useContext(store) as IAppContextWithDispatch;
@@ -24,8 +25,8 @@ export const Login: FC = (): JSX.Element => {
 
   return (
     <View style={styles.container}>
-      <View style={styles.titleContainer}>
-        <TextCA style={styles.text}>CovidApp</TextCA>
+      <View style={styles.iconContainer}>
+        <Image source={require(APP_ICON_ROUTE)} style={styles.icon} />
       </View>
       <View style={styles.buttonsContainer}>
         <Input

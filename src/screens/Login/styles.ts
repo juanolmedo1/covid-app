@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { colors, fontSizes, spacings } from '@utils/styles';
+import { colors, spacings } from '@utils/styles';
 
 export default StyleSheet.create({
   container: {
@@ -8,9 +8,11 @@ export default StyleSheet.create({
     justifyContent: 'space-around',
     alignItems: 'center',
   },
-  titleContainer: {
+  iconContainer: {
+    flexDirection: 'row',
     height: 200,
     justifyContent: 'center',
+    alignItems: 'flex-end',
   },
   buttonsContainer: {
     flex: 1,
@@ -27,9 +29,8 @@ export default StyleSheet.create({
     justifyContent: 'flex-end',
     marginBottom: spacings.L,
   },
-  text: {
-    fontSize: fontSizes.XL,
-    fontWeight: '500',
-    color: colors.white,
+  icon: {
+    height: 150,
+    width: 150,
   },
 });

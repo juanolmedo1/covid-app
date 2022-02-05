@@ -1,18 +1,8 @@
 import React, { createContext, FC } from 'react';
 import useStoreReducer from './reducer';
-import { IAppContext, IAppContextWithDispatch } from './types';
+import { IAppContextWithDispatch } from './types';
 
-const initialState: IAppContext = {
-  countries: [],
-  confirmedCases: {},
-  sortConfig: {
-    key: 'Cases',
-    orderCases: 'ASC',
-    orderDate: 'ASC',
-  },
-  auth: null,
-};
-const store = createContext<IAppContext>(initialState);
+const store = createContext({});
 const { Provider } = store;
 
 const StoreProvider: FC = ({ children }): JSX.Element => {

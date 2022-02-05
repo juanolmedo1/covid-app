@@ -26,7 +26,7 @@ const initialState: IAppContext = {
   auth: null,
 };
 
-const reducer = (state = initialState, action: Action): IAppContext => {
+const reducer = (state: IAppContext, action: Action): IAppContext => {
   switch (action.type) {
     case SET_COUNTRIES: {
       return {
