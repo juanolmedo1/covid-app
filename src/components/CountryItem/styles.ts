@@ -5,7 +5,7 @@ export default StyleSheet.create({
   container: {
     height: 80,
     backgroundColor: colors.blue,
-    borderBottomWidth: 1,
+    borderBottomWidth: 0.5,
     borderColor: colors.white,
     marginVertical: spacings.XS,
     marginHorizontal: spacings.L,

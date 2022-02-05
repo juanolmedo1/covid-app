@@ -14,9 +14,13 @@ export default StyleSheet.create({
   description: {
     color: colors.white,
     marginHorizontal: spacings.M,
-    paddingBottom: spacings.S,
+    paddingBottom: spacings.XS,
     fontSize: fontSizes.S,
     fontWeight: '300',
+  },
+  searchBar: {
+    width: '80%',
+    marginBottom: spacings.S,
   },
   logoutButton: {
     height: '100%',
