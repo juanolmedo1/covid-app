@@ -15,7 +15,7 @@ export default StyleSheet.create({
   name: {
     fontSize: fontSizes.M,
     color: colors.green,
-    fontWeight: 'bold',
+    fontWeight: '600',
   },
   code: {
     fontSize: fontSizes.XS,

@@ -12,13 +12,13 @@ export default StyleSheet.create({
   date: {
     fontSize: fontSizes.S,
     color: colors.white,
-    fontWeight: '400',
+    fontWeight: '300',
     marginLeft: spacings.XXL,
   },
   cases: {
     fontSize: fontSizes.S,
     color: colors.white,
-    fontWeight: 'bold',
+    fontWeight: '500',
     marginRight: spacings.XXL,
   },
 });

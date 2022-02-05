@@ -41,6 +41,8 @@ const HomeStackComponent = (): JSX.Element => {
         headerTitleStyle: {
           color: colors.white,
           fontSize: fontSizes.L,
+          fontFamily: 'Poppins-SemiBold',
+          fontWeight: '500',
         },
       }}>
       <HomeStack.Screen
@@ -93,7 +95,8 @@ export const RootNavigator = (): JSX.Element => {
 
   return (
     <NavigationContainer>
-      <RootStack.Navigator>
+      <RootStack.Navigator
+        screenOptions={{ cardStyle: { backgroundColor: colors.blue } }}>
         {!isLoggedIn ? (
           <RootStack.Screen
             name="Login"

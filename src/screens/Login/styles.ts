@@ -29,7 +29,7 @@ export default StyleSheet.create({
   },
   text: {
     fontSize: fontSizes.XL,
-    fontWeight: '600',
+    fontWeight: '500',
     color: colors.white,
   },
 });

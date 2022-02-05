@@ -1,7 +1,8 @@
 import React, { FC } from 'react';
-import { Text, View } from 'react-native';
+import { View } from 'react-native';
 import format from 'date-fns/format';
 import styles from './styles';
+import { TextCA } from '@components/TextCA';
 
 type DateCasesItemProps = {
   date: string;
@@ -18,8 +19,8 @@ export const DateCasesItem: FC<DateCasesItemProps> = ({
 
   return (
     <View style={styles.container}>
-      <Text style={styles.date}>{formatDate(date)}</Text>
-      <Text style={styles.cases}>{cases}</Text>
+      <TextCA style={styles.date}>{formatDate(date)}</TextCA>
+      <TextCA style={styles.cases}>{cases}</TextCA>
     </View>
   );
 };

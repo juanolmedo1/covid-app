@@ -15,10 +15,8 @@ export default StyleSheet.create({
     color: colors.white,
     marginHorizontal: spacings.M,
     paddingBottom: spacings.S,
-  },
-  text: {
-    fontSize: fontSizes.XL,
-    fontWeight: '600',
+    fontSize: fontSizes.S,
+    fontWeight: '300',
   },
   logoutButton: {
     height: '100%',

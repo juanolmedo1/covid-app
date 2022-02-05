@@ -1,5 +1,11 @@
-import React, { FC, useContext, useEffect, useLayoutEffect } from 'react';
-import { SafeAreaView, FlatList, Text } from 'react-native';
+import React, {
+  FC,
+  useContext,
+  useEffect,
+  useLayoutEffect,
+  useState,
+} from 'react';
+import { SafeAreaView, FlatList, View, ActivityIndicator } from 'react-native';
 import { CountryItem } from '@components/index';
 import { getCountries } from '@services/index';
 import { store } from '@store/index';
@@ -12,8 +18,10 @@ import { signOut } from '@services/google';
 import { colors } from '@utils/styles';
 import { IAppContextWithDispatch } from '@store/types';
 import styles from './styles';
+import { TextCA } from '@components/TextCA';
 
 export const Countries: FC<CountriesProps> = ({ navigation }): JSX.Element => {
+  const [loading, setLoading] = useState<boolean>(false);
   const globalState = useContext(store) as IAppContextWithDispatch;
   const { auth, countries, dispatch } = globalState;
 
@@ -21,8 +29,10 @@ export const Countries: FC<CountriesProps> = ({ navigation }): JSX.Element => {
     const getAllCountries = async (): Promise<void> => {
       const countriesResponse = await getCountries();
       dispatch(setCountries(countriesResponse));
+      setLoading(false);
     };
     if (!countries.length) {
+      setLoading(true);
       getAllCountries();
     }
   }, [dispatch, countries.length]);
@@ -62,12 +72,20 @@ export const Countries: FC<CountriesProps> = ({ navigation }): JSX.Element => {
     );
   };
 
+  if (loading) {
+    return (
+      <View style={styles.container}>
+        <ActivityIndicator size="large" />
+      </View>
+    );
+  }
+
   return (
     <SafeAreaView style={styles.container}>
-      <Text style={styles.description}>
+      <TextCA style={styles.description}>
         {auth?.user.givenName}, please tap on any country to check COVID-19
         cases per day:
-      </Text>
+      </TextCA>
       <FlatList
         style={styles.list}
         data={countries}

@@ -16,26 +16,20 @@ export default StyleSheet.create({
   },
   date: {
     fontSize: fontSizes.M,
-    fontWeight: '600',
     color: colors.green,
     marginLeft: spacings.XXL,
   },
   cases: {
     fontSize: fontSizes.M,
-    fontWeight: '600',
     color: colors.green,
     marginRight: spacings.XXS,
-  },
-  text: {
-    fontSize: fontSizes.XL,
-    fontWeight: '600',
   },
   list: {
     width: '100%',
   },
   title: {
     fontSize: fontSizes.L,
-    fontWeight: '600',
+    fontWeight: '500',
     color: colors.white,
     marginBottom: spacings.M,
   },
@@ -43,5 +37,7 @@ export default StyleSheet.create({
     fontSize: fontSizes.S,
     fontWeight: '300',
     color: colors.white,
+    textAlign: 'center',
+    marginHorizontal: spacings.M,
   },
 });

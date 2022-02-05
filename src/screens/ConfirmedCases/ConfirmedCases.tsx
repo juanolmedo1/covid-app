@@ -1,5 +1,5 @@
 import React, { useEffect, useContext, useState, FC } from 'react';
-import { View, Text, FlatList, ActivityIndicator } from 'react-native';
+import { View, FlatList, ActivityIndicator } from 'react-native';
 import { DateCasesItem, SortIcon } from '@components/index';
 import { getCasesByCountry } from '@services/index';
 import { store } from '@store/index';
@@ -8,6 +8,7 @@ import { ConfirmedCasesProps } from '@navigation/index';
 import { ConfirmedCases } from '@common-types/index';
 import styles from './styles';
 import { IAppContextWithDispatch } from '@store/types';
+import { TextCA } from '@components/TextCA';
 
 export const ConfirmedCasesFn: FC<ConfirmedCasesProps> = ({
   route,
@@ -62,10 +63,10 @@ export const ConfirmedCasesFn: FC<ConfirmedCasesProps> = ({
   if (!confirmedCases[id]?.length) {
     return (
       <View style={styles.container}>
-        <Text style={styles.title}>We're sorry!</Text>
-        <Text style={styles.subtitle}>
-          We do not have information for the selected country.
-        </Text>
+        <TextCA style={styles.title}>We're sorry!</TextCA>
+        <TextCA style={styles.subtitle}>
+          We don't have information for the selected country.
+        </TextCA>
       </View>
     );
   }
@@ -73,12 +74,12 @@ export const ConfirmedCasesFn: FC<ConfirmedCasesProps> = ({
   return (
     <View style={styles.container}>
       <View style={styles.titlesContainer}>
-        <Text style={styles.date}>
+        <TextCA style={styles.date}>
           Date <SortIcon sort={sortByDate} />
-        </Text>
-        <Text style={styles.cases}>
+        </TextCA>
+        <TextCA style={styles.cases}>
           Cases <SortIcon sort={sortByCases} />
-        </Text>
+        </TextCA>
       </View>
       <FlatList
         style={styles.list}

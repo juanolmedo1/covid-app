@@ -12,5 +12,7 @@ export default StyleSheet.create({
     fontSize: fontSizes.S,
     paddingLeft: spacings.XS,
     marginVertical: spacings.XS,
+    fontFamily: 'Poppins-SemiBold',
+    fontWeight: '300',
   },
 });

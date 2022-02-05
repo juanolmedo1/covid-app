@@ -1,7 +1,8 @@
 import React, { FC } from 'react';
-import { Text, TouchableOpacity } from 'react-native';
+import { TouchableOpacity } from 'react-native';
 import { Country } from '@common-types/index';
 import styles from './styles';
+import { TextCA } from '@components/TextCA';
 
 type CountryItemProps = {
   country: Country;
@@ -16,9 +17,9 @@ export const CountryItem: FC<CountryItemProps> = ({
 
   return (
     <TouchableOpacity style={styles.container} onPress={onPress}>
-      <Text style={styles.name}>
-        {country.Country} <Text style={styles.code}>({ISO2})</Text>
-      </Text>
+      <TextCA style={styles.name}>
+        {country.Country} <TextCA style={styles.code}>({ISO2})</TextCA>
+      </TextCA>
     </TouchableOpacity>
   );
 };

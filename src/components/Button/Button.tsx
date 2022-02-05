@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
-import { Text, TouchableOpacity } from 'react-native';
+import { TouchableOpacity } from 'react-native';
+import { TextCA } from '@components/TextCA';
 import styles from './styles';
 
 type ButtonProps = {
@@ -25,7 +26,7 @@ export const Button: FC<ButtonProps> = ({
   const textStyle = textStyles[type];
   return (
     <TouchableOpacity style={containerStyle} onPress={onPress}>
-      <Text style={textStyle}>{title}</Text>
+      <TextCA style={textStyle}>{title}</TextCA>
     </TouchableOpacity>
   );
 };
