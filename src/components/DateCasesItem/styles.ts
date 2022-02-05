@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { fontSizes, spacings, textColors } from '@utils/styles';
+import { fontSizes, spacings, colors } from '@utils/styles';
 
 export default StyleSheet.create({
   container: {
@@ -11,13 +11,13 @@ export default StyleSheet.create({
   },
   date: {
     fontSize: fontSizes.S,
-    color: textColors.white,
+    color: colors.white,
     fontWeight: '400',
     marginLeft: spacings.XXL,
   },
   cases: {
     fontSize: fontSizes.S,
-    color: textColors.white,
+    color: colors.white,
     fontWeight: 'bold',
     marginRight: spacings.XXL,
   },

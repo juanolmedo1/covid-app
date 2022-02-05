@@ -1,15 +1,10 @@
 import { StyleSheet } from 'react-native';
-import {
-  fontSizes,
-  backgroundColors,
-  textColors,
-  spacings,
-} from '@utils/styles';
+import { fontSizes, colors, spacings } from '@utils/styles';
 
 export default StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: backgroundColors.blue,
+    backgroundColor: colors.blue,
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -17,7 +12,7 @@ export default StyleSheet.create({
     width: '100%',
   },
   description: {
-    color: textColors.white,
+    color: colors.white,
     marginHorizontal: spacings.M,
     paddingBottom: spacings.S,
   },

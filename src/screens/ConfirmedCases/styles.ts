@@ -1,15 +1,10 @@
 import { StyleSheet } from 'react-native';
-import {
-  backgroundColors,
-  fontSizes,
-  spacings,
-  textColors,
-} from '@utils/styles';
+import { colors, fontSizes, spacings } from '@utils/styles';
 
 export default StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: backgroundColors.blue,
+    backgroundColor: colors.blue,
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -22,13 +17,13 @@ export default StyleSheet.create({
   date: {
     fontSize: fontSizes.M,
     fontWeight: '600',
-    color: textColors.green,
+    color: colors.green,
     marginLeft: spacings.XXL,
   },
   cases: {
     fontSize: fontSizes.M,
     fontWeight: '600',
-    color: textColors.green,
+    color: colors.green,
     marginRight: spacings.XXS,
   },
   text: {
@@ -41,12 +36,12 @@ export default StyleSheet.create({
   title: {
     fontSize: fontSizes.L,
     fontWeight: '600',
-    color: textColors.white,
+    color: colors.white,
     marginBottom: spacings.M,
   },
   subtitle: {
     fontSize: fontSizes.S,
     fontWeight: '300',
-    color: textColors.white,
+    color: colors.white,
   },
 });

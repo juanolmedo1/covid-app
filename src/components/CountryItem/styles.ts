@@ -1,17 +1,12 @@
 import { StyleSheet } from 'react-native';
-import {
-  backgroundColors,
-  fontSizes,
-  spacings,
-  textColors,
-} from '@utils/styles';
+import { colors, fontSizes, spacings } from '@utils/styles';
 
 export default StyleSheet.create({
   container: {
     height: 80,
-    backgroundColor: backgroundColors.blue,
+    backgroundColor: colors.blue,
     borderBottomWidth: 1,
-    borderColor: backgroundColors.white,
+    borderColor: colors.white,
     marginVertical: spacings.XS,
     marginHorizontal: spacings.L,
     justifyContent: 'center',
@@ -19,12 +14,12 @@ export default StyleSheet.create({
   },
   name: {
     fontSize: fontSizes.M,
-    color: textColors.green,
+    color: colors.green,
     fontWeight: 'bold',
   },
   code: {
     fontSize: fontSizes.XS,
-    color: textColors.white,
+    color: colors.white,
     fontWeight: '300',
   },
 });

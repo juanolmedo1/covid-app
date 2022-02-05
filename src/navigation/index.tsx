@@ -5,7 +5,7 @@ import {
   StackScreenProps,
 } from '@react-navigation/stack';
 import { Login, ConfirmedCasesFn, Countries } from '@screens/index';
-import { backgroundColors, fontSizes, textColors } from '@utils/styles';
+import { colors, fontSizes } from '@utils/styles';
 import { ActivityIndicator, View } from 'react-native';
 import { getCurrentUser, isSignedIn } from '@services/google';
 import { store } from '@store/index';
@@ -32,14 +32,14 @@ const HomeStackComponent = (): JSX.Element => {
     <HomeStack.Navigator
       screenOptions={{
         headerStyle: {
-          backgroundColor: backgroundColors.blue,
+          backgroundColor: colors.blue,
           height: 100,
           shadowColor: 'transparent',
         },
         headerBackTitleVisible: false,
-        headerTintColor: backgroundColors.white,
+        headerTintColor: colors.white,
         headerTitleStyle: {
-          color: textColors.white,
+          color: colors.white,
           fontSize: fontSizes.L,
         },
       }}>

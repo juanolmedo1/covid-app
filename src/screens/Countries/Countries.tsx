@@ -9,7 +9,7 @@ import { CountriesProps } from '@navigation/index';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import IconMaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import { signOut } from '@services/google';
-import { backgroundColors } from '@utils/styles';
+import { colors } from '@utils/styles';
 import { IAppContextWithDispatch } from '@store/types';
 import styles from './styles';
 
@@ -36,11 +36,7 @@ export const Countries: FC<CountriesProps> = ({ navigation }): JSX.Element => {
     navigation.setOptions({
       headerRight: () => (
         <TouchableOpacity style={styles.logoutButton} onPress={logout}>
-          <IconMaterialIcons
-            name="logout"
-            size={24}
-            color={backgroundColors.white}
-          />
+          <IconMaterialIcons name="logout" size={24} color={colors.white} />
         </TouchableOpacity>
       ),
     });
