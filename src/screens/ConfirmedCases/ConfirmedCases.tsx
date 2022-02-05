@@ -92,6 +92,7 @@ export const ConfirmedCasesFn: FC<ConfirmedCasesProps> = ({
         data={confirmedCases[id]}
         renderItem={renderItem}
         getItemLayout={getItemLayout}
+        scrollIndicatorInsets={{ right: 1 }}
         keyExtractor={item => item.Date}
       />
     </View>

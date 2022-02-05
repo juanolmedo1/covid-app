@@ -120,6 +120,7 @@ export const Countries: FC<CountriesProps> = ({ navigation }): JSX.Element => {
         data={countriesArray}
         renderItem={renderItem}
         getItemLayout={getItemLayout}
+        scrollIndicatorInsets={{ right: 1 }}
         keyExtractor={item => item.ISO2}
       />
     </View>
