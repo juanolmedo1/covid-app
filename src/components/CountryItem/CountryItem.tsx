@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, memo } from 'react';
 import { TouchableOpacity } from 'react-native';
 import { Country } from '@common-types/index';
 import styles from './styles';
@@ -9,7 +9,7 @@ type CountryItemProps = {
   onPress: () => void;
 };
 
-export const CountryItem: FC<CountryItemProps> = ({
+const CountryItemFC: FC<CountryItemProps> = ({
   country,
   onPress,
 }): JSX.Element => {
@@ -23,3 +23,5 @@ export const CountryItem: FC<CountryItemProps> = ({
     </TouchableOpacity>
   );
 };
+
+export const CountryItem = memo(CountryItemFC);

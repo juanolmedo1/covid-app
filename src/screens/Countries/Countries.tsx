@@ -72,6 +72,12 @@ export const Countries: FC<CountriesProps> = ({ navigation }): JSX.Element => {
     );
   };
 
+  const getItemLayout = (_: any, index: number) => ({
+    length: 96,
+    index,
+    offset: 96 * index,
+  });
+
   if (loading) {
     return (
       <View style={styles.container}>
@@ -89,8 +95,8 @@ export const Countries: FC<CountriesProps> = ({ navigation }): JSX.Element => {
       <FlatList
         style={styles.list}
         data={countries}
-        initialNumToRender={20}
         renderItem={renderItem}
+        getItemLayout={getItemLayout}
         keyExtractor={item => item.ISO2}
       />
     </SafeAreaView>

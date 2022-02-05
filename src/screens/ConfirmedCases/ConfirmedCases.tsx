@@ -52,6 +52,12 @@ export const ConfirmedCasesFn: FC<ConfirmedCasesProps> = ({
     return <DateCasesItem date={item.Date} cases={item.Cases} />;
   };
 
+  const getItemLayout = (_: any, index: number) => ({
+    length: 34,
+    index,
+    offset: 34 * index,
+  });
+
   if (loading) {
     return (
       <View style={styles.container}>
@@ -84,8 +90,8 @@ export const ConfirmedCasesFn: FC<ConfirmedCasesProps> = ({
       <FlatList
         style={styles.list}
         data={confirmedCases[id]}
-        initialNumToRender={20}
         renderItem={renderItem}
+        getItemLayout={getItemLayout}
         keyExtractor={item => item.Date}
       />
     </View>

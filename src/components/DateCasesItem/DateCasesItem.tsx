@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, memo } from 'react';
 import { View } from 'react-native';
 import format from 'date-fns/format';
 import styles from './styles';
@@ -9,7 +9,7 @@ type DateCasesItemProps = {
   cases: number;
 };
 
-export const DateCasesItem: FC<DateCasesItemProps> = ({
+const DateCasesItemFC: FC<DateCasesItemProps> = ({
   date,
   cases,
 }): JSX.Element => {
@@ -24,3 +24,5 @@ export const DateCasesItem: FC<DateCasesItemProps> = ({
     </View>
   );
 };
+
+export const DateCasesItem = memo(DateCasesItemFC);
