@@ -7,7 +7,9 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "e2e:build": "detox build --configuration ios",
+    "e2e:test": "detox test --configuration ios"
   },
   "dependencies": {
     "@react-native-async-storage/async-storage": "^1.15.15",
@@ -29,16 +31,17 @@
     "@babel/core": "^7.12.9",
     "@babel/runtime": "^7.12.5",
     "@react-native-community/eslint-config": "^2.0.0",
-    "@types/jest": "^26.0.23",
+    "@types/jest": "^27.4.0",
     "@types/react-native": "^0.66.4",
     "@types/react-native-vector-icons": "^6.4.10",
     "@types/react-test-renderer": "^17.0.1",
     "@typescript-eslint/eslint-plugin": "^5.7.0",
     "@typescript-eslint/parser": "^5.7.0",
-    "babel-jest": "^26.6.3",
     "babel-plugin-module-resolver": "^4.1.0",
+    "babel-jest": "^27.5.1",
+    "jest": "^27.5.1",
+    "detox": "^19.4.4",
     "eslint": "^7.14.0",
-    "jest": "^26.6.3",
     "metro-react-native-babel-preset": "^0.66.2",
     "react-test-renderer": "17.0.2",
     "reactotron-react-native": "^5.0.1",
@@ -49,6 +52,7 @@
   },
   "jest": {
     "preset": "react-native",
+    "modulePathIgnorePatterns": ["<rootDir>/ios/build"],
     "moduleFileExtensions": [
       "ts",
       "tsx",

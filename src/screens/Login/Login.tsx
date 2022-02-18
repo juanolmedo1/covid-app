@@ -26,15 +26,21 @@ export const Login: FC = (): JSX.Element => {
   return (
     <View style={styles.container}>
       <View style={styles.iconContainer}>
-        <Image source={require(APP_ICON_ROUTE)} style={styles.icon} />
+        <Image
+          testID="AppIcon"
+          source={require(APP_ICON_ROUTE)}
+          style={styles.icon}
+        />
       </View>
       <View style={styles.buttonsContainer}>
         <Input
+          testID="UsernameInput"
           placeholder="Username"
           value={username}
           onChangeText={setUsername}
         />
         <Input
+          testID="PasswordInput2"
           placeholder="Password"
           secureTextEntry={true}
           value={password}
